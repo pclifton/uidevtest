@@ -1,0 +1,198 @@
+// I <3 Bootstrap
+@import "variables.less";
+@import "responsive-480-max.less";
+@import "responsive-481-min.less";
+@import "bootstrap/mixins.less";
+@import "bootstrap/reset.less";
+
+body {
+    color: @fontColor;
+    font-family: @fontFamily;
+    font-size: 14px;
+    padding: 15px;
+    
+    p {
+        margin: 25px 0;
+    }
+}
+
+section.storyList {
+    
+    article {
+        clear: both;
+        float: left;
+        margin: 10px 0;
+        
+        img {
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            box-shadow: 2px 2px 2px #8e8e8e;
+            float: left;
+        }
+        
+        div.wrapper {
+            float: left;
+            margin-left: 15px;
+            
+            h2 {
+                margin: 0;
+                
+                a {
+                    color: @blue;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+            }
+            
+            ul.categories {
+                float: left;
+                list-style: none;
+                margin: 0 0 20px 0;
+                padding: 0;
+                
+                li {
+                    float: left;
+                    
+                    &:after {
+                        content: ', ';
+                    }
+                    
+                    &:last-child:after {
+                        content: '';
+                    }
+                }
+            }
+            
+            p.timestamp {
+                clear: both;
+                margin: 0;
+            }
+        }
+    }
+}
+
+section.storyView {
+    nav {
+        float: left;
+        margin-bottom: 10px;
+        width: 100%;
+
+        ul {
+            border-top: 2px solid @navBorderColor;
+            border-bottom: 2px solid @navBorderColor;
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            li {
+                display: block;
+                float: left;
+
+                &:after {
+                    content: ">";
+                    color: @navFontColor;
+                    font-size: 11px;
+                }
+
+                &:first-child {
+                    margin-left: 3px;
+                }
+
+                &:last-child {
+                    &:after {
+                        content: "";
+                    }
+                }
+
+                a {
+                    color: @navFontColor;
+                    font-size: 11px;
+                    font-weight: bold;
+                    margin: 0 7px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    article {
+        clear: both;
+
+        header {
+            h1 {
+                font-size: 24px;
+                margin: 10px 0;
+            }
+
+            div.meta {
+                font-size: 11px;
+            }
+        }
+
+        ul.social {
+            float: left;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: block;
+                float: left;
+                margin-right: 20px;
+
+                a {
+                    color: @socialFontColor;
+                    display: block;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 11px;
+
+                    span.icon {
+                        background: url('../images/uidevtest-sprites.png');
+                        display: inline-block;
+                        height: 20px;
+                        margin-right: 5px;
+                        position: relative;
+                        top: 5px;
+                        width: 20px;
+
+                        &.comment {
+                            background-position: 0 0;
+                        }
+
+                        &.share {
+                            background-position: -20px 0;
+                        }
+
+                        &.favorite {
+                            background-position: -40px 0;
+                        }
+
+                        &.vote {
+                            background-position: -60px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        div.articleWrapper {
+            p.byline {
+                clear: both;
+
+                a {
+                    color: @blue;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
